@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-	selector: 'app-root',
+	selector: 'app-morty',
 	standalone: true,
 	imports: [RouterOutlet],
-	template: `<router-outlet />`,
+	templateUrl: './morty.component.html',
+	styleUrl: './morty.component.scss',
 })
-export class AppComponent {}
+export default class MortyComponent {}
