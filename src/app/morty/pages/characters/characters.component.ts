@@ -9,6 +9,8 @@ import { TableMortyComponent } from '@morty/components';
 	standalone: true,
 	imports: [AsyncPipe, TableMortyComponent],
 	template: `<section class="characters">
+		<h2 class="text-center">List of Characters</h2>
+		<hr />
 		@if (charactersInfo$ | async; as charactersInfo) {
 			<app-table-morty
 				[characters]="charactersInfo.results"

@@ -26,13 +26,12 @@ export class TableMortyComponent implements OnInit {
 
 	onInitConfPagination(): void {
 		this.currentPage = this.pagination.currentPage;
-		//this.currentIndex = this.currentPage - 1;
 		this.pages = Array.from(
 			{ length: this.pagination.pages },
 			(_, index) => index + 1,
 		);
 
-		const endIndex = Math.min(this.currentIndex + 5, this.pages.length);
+		const endIndex = Math.min(this.currentIndex + 10, this.pages.length);
 		this.currentGroup = this.pages.slice(this.currentIndex, endIndex);
 		this.currentIndex = endIndex;
 	}

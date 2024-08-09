@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<div class="table-responsive table-container">
 	<table class="table table-striped table-hover">
 		<thead>
 			<tr class="table-info">
@@ -16,13 +16,23 @@
 					<td>{{ character.status }}</td>
 					<td>{{ character.species }}</td>
 					<td>{{ character.gender }}</td>
-					<td>{{ character.created }}</td>
+					<td>{{ character.created | date: 'YYYY-MM-dd' }}</td>
 				</tr>
+			} @empty {
+				<p>Loading characters...</p>
 			}
 		</tbody>
 	</table>
+</div>
+<div class="d-flex justify-content-between align-items-center mt-3">
+	<p class="mb-0">
+		<strong>
+			{{ pagination.count }}
+			Characters
+		</strong>
+	</p>
 	<nav aria-label="Page navigation" class="d-flex justify-content-end">
-		<ul class="pagination">
+		<ul class="pagination mb-0">
 			<li
 				class="page-item"
 				[ngClass]="pagination.prev === null ? 'disabled' : ''"
