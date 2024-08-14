@@ -1,0 +1,30 @@
+<nav aria-label="Page navigation" class="d-flex justify-content-end">
+	<ul class="pagination mb-0">
+		<li class="page-item" [ngClass]="currentPage <= 1 ? 'disabled' : ''">
+			<button
+				class="page-link"
+				[disabled]="currentPage <= 1"
+				(click)="onPreviusPage()"
+			>
+				Previous
+			</button>
+		</li>
+		@for (page of pages; track $index) {
+			<li class="page-item" [ngClass]="currentPage === page ? 'active' : ''">
+				<button class="page-link" (click)="onGetPage(page)">{{ page }}</button>
+			</li>
+		}
+		<li
+			class="page-item"
+			[ngClass]="currentPage >= totalPages ? 'disabled' : ''"
+		>
+			<button
+				class="page-link"
+				[disabled]="currentPage >= totalPages"
+				(click)="onNextPage()"
+			>
+				Next
+			</button>
+		</li>
+	</ul>
+</nav>

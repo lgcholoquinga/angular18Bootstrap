@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 import { Character, Info } from '@morty/core/models';
+import { TablePaginationComponent } from '@shared/components';
 
 @Component({
 	selector: 'app-table-morty',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, TablePaginationComponent],
 	templateUrl: './table-morty.component.html',
 	styleUrl: './table-morty.component.scss',
 })
