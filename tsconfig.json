@@ -7,7 +7,7 @@
     "strict": true,
     "baseUrl": "./src/",
     "paths": {
-      "@shared/*": ["app/shared/*"],
+      "@common/*": ["app/common/*"],
       "@morty/*": ["app/morty/*"],
     },
     "noImplicitOverride": true,

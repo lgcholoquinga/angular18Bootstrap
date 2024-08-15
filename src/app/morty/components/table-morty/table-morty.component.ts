@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TablePaginationComponent } from '@common/components';
 
 import { Character, Info } from '@morty/core/models';
-import { TablePaginationComponent } from '@shared/components';
 
 @Component({
 	selector: 'app-table-morty',
